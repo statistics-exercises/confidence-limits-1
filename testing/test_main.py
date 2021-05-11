@@ -19,4 +19,4 @@ class UnitTests(unittest.TestCase) :
                 inputs.append((a,b,))
                 myvar = randomvar( (a+b)/2, variance=((b-a+1)*(b-a+1)-1)/12, vmin=a, vmax=b, isinteger=True )
                 variables.append( myvar )
-        assert( check_func('discrete_uniform', inputs, variables ) )
+        assert( check_func('uniform_discrete', inputs, variables ) )
