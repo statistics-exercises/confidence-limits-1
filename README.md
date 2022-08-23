@@ -2,15 +2,15 @@
 
 We learned in a previous series of exercises that we can generate a uniformly distributed random variable between `a` and `b+1` using:
 
-````
+```python
 U = np.random.uniform(a,b+1)
-```` 
+``` 
  
 To generate this variable we generate a uniform random variable between 0 and 1 and then transform using:
 
-````
+```python
 U = a + (b-a+1)*np.random.uniform(0,1)
-````
+```
 
 As you can see when `np.random.uniform` returns a 0 `U` will equal `a`.  By contrast, when `np.random.uniform(0,1)` returns a 1 `U` will equal `b+1`.
 
@@ -18,9 +18,9 @@ In this exercise, we are going to introduce the code to generate another type of
 
 We could use the code that we learnt to generate the multinomial distribution in order to complete this task.  There is an easier way, however, which involves taking advantage of the floor function:
 
-````
+```python
 a = np.floor(b) 
-````
+```
 
 The floor of `b` is the integer that you obtain when you strip everything after the decimal point in `b`.  Thus if in the above `b=9.85` then `a=np.floor(b)=9`.  Similarly, if `b=3.1` then `a=np.floor(b)=3`.
 
